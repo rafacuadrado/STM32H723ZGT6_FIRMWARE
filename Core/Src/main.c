@@ -599,7 +599,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : WRITE_PROTECT_Pin CARD_DETECT_Pin */
   GPIO_InitStruct.Pin = WRITE_PROTECT_Pin|CARD_DETECT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
