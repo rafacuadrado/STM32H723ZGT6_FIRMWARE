@@ -119,10 +119,10 @@ int main(void)
   MX_DCMI_Init();
   MX_FDCAN1_Init();
   MX_I2C4_Init();
-  MX_SDMMC1_SD_Init();
+  //MX_SDMMC1_SD_Init();
   MX_SPI2_Init();
   MX_UART4_Init();
-  MX_USB_OTG_HS_PCD_Init();
+  //MX_USB_OTG_HS_PCD_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -131,6 +131,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_GPIO_TogglePin(GPIO01_GPIO_Port, GPIO01_Pin);
+	  HAL_Delay(300);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
